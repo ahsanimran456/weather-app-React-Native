@@ -244,12 +244,12 @@ function Body() {
                     </Text> */}
                 </View>
             </View>
-            <SafeAreaView style={{ paddingHorizontal: 20, }}>
+            <View style={{ paddingHorizontal: 20, }}>
                 <View style={{ backgroundColor: "#202229", borderRadius: 15, paddingVertical: 10, paddingHorizontal: 10 }} >
                     <View style={{ marginTop: 5 }}>
                         <View>
                             <Text style={{ fontSize: 50, fontWeight: 700, color: "#fff" }}>
-                              {CurrentTemperature ? CurrentTemperature : <ActivityIndicator size="large" /> }°C
+                                {CurrentTemperature ? CurrentTemperature : <ActivityIndicator size="large" />}°C
                             </Text>
                         </View>
                     </View>
@@ -265,10 +265,10 @@ function Body() {
                             </Text>
                         </View> */}
                         <View style={{ marginTop: 10, alignItems: "center" }} >
-                            
+
                             <Image source={require("../../Assests/images/site.gif")} style={{ width: 60, height: 60 }} />
                             <Text style={{ fontSize: 17, }}>
-                                {Temspeed ?Temspeed :<ActivityIndicator size="large" />} m/s
+                                {Temspeed ? Temspeed : <ActivityIndicator size="large" />} m/s
                             </Text>
                             <Text style={{ fontSize: 15, }}>
                                 Wind
@@ -295,7 +295,8 @@ function Body() {
                     </View>
 
                 </View>
-            </SafeAreaView>
+            </View>
+
         </>
     );
 }

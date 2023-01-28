@@ -53,31 +53,29 @@ function Header() {
 
 
     return (
-        <SafeAreaView>
-            <View>
-                <View style={header.header_top}>
-                    <View style={{ flexDirection: "row", alignItems: "center", width: "80%", borderWidth: 2, borderColor: "#fff", borderRadius: 50 }}>
-                        <TextInput placeholder='Search' onChangeText={(e) => { setCityName(e) }} style={header.searches} maxLength={20} />
-                        <TouchableOpacity onPress={SearchWeather}>
-                            {/* <Icon name="facebook" size={20} color="#4F8EF7" /> */}
-                            <AIcon
-                                size={30}
-                                color="#fff"
-                                name="search"
-                            />
-                        </TouchableOpacity>
-                    </View>
-                    <View>
+        <View>
+            <View style={header.header_top}>
+                <View style={{ flexDirection: "row", alignItems: "center", width: "80%", borderWidth: 2, borderColor: "#fff", borderRadius: 50 }}>
+                    <TextInput placeholder='Search' onChangeText={(e) => { setCityName(e) }} style={header.searches} maxLength={20} />
+                    <TouchableOpacity onPress={SearchWeather}>
+                        {/* <Icon name="facebook" size={20} color="#4F8EF7" /> */}
                         <AIcon
-                            size={28}
+                            size={30}
                             color="#fff"
-                            name="cloud"
+                            name="search"
                         />
-                    </View>
+                    </TouchableOpacity>
                 </View>
-
+                <View>
+                    <AIcon
+                        size={28}
+                        color="#fff"
+                        name="cloud"
+                    />
+                </View>
             </View>
-        </SafeAreaView>
+
+        </View>
     );
 }
 
